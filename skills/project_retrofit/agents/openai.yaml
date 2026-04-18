@@ -1,8 +1,0 @@
-interface:
-  display_name: "Project Retrofit"
-  short_description: "Inventory and map an existing non-harness project into the Generic Project Harness."
-  default_prompt: "Use $project_retrofit to inventory the repository and prepare a non-destructive migration map before any overlay."
-  brand_color: "#5B4BFF"
-
-policy:
-  allow_implicit_invocation: false

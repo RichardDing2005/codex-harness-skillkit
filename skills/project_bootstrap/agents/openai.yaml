@@ -1,8 +1,0 @@
-interface:
-  display_name: "Project Bootstrap"
-  short_description: "Initialize a new or nearly empty project into a first-operable Generic Project Harness."
-  default_prompt: "Use $project_bootstrap to read BOOTSTRAP_BRIEF.md, ask only blocking questions, and generate a first-operable harness."
-  brand_color: "#5B4BFF"
-
-policy:
-  allow_implicit_invocation: false
