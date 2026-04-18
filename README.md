@@ -3,7 +3,7 @@
 A publishable Codex plugin that bundles three explicit-use skills:
 
 - `project_bootstrap` — create a first-operable Generic Project Harness from a new or nearly empty project brief.
-- `project_retrofit` — inventory and migrate an existing non-harness project into the harness without silently discarding history.
+- `project_retrofit` — plan and safely overlay a Generic Project Harness around an existing non-harness repository without moving or discarding legacy material.
 - `project_evolution` — make controlled changes to an already harnessed repository while preserving state and memory continuity.
 
 ## Package model
@@ -15,7 +15,7 @@ The repository also includes a **repo-local marketplace** at `.agents/plugins/ma
 ## Skill maturity
 
 - `project_bootstrap`: beta — fully scripted runner, renderer, validator, and smoke test.
-- `project_retrofit`: preview — report-first workflow with a conservative overlay helper.
+- `project_retrofit`: beta — directory-level planning plus guarded `apply-safe-overlay` with validation and conflict redirection.
 - `project_evolution`: preview — impact-report-first workflow with controlled validation.
 
 ## Supported installation modes
@@ -42,6 +42,10 @@ All three skills disable implicit invocation. Use them explicitly:
 
 The package also ships with skill-specific default prompts in the plugin manifest and in each skill's `agents/openai.yaml`.
 
+## Safety before retrofit or evolution
+
+Before using `project_retrofit` or `project_evolution`, strongly back up the current project files and data. `project_retrofit` may add a harness shell around an existing repository, and `project_evolution` may modify control files, process documentation, state, or memory artifacts.
+
 ## Self-check
 
 Run:
@@ -50,7 +54,7 @@ Run:
 python3 scripts/self_check.py
 ```
 
-This checks package structure and runs a bootstrap smoke test into a temporary repository.
+This checks package structure, runs a bootstrap smoke test, exercises retrofit planning and safe overlay on a temporary legacy repository, checks the retrofit conflict path, and runs an evolution smoke test on a generated harness.
 
 ## Important operational note
 

@@ -1,0 +1,8 @@
+interface:
+  display_name: "Project Evolution"
+  short_description: "Apply controlled changes to an existing Generic Project Harness."
+  default_prompt: "Use $project_evolution to create an impact report and make a controlled harness change while preserving continuity."
+  brand_color: "#5B4BFF"
+
+policy:
+  allow_implicit_invocation: false

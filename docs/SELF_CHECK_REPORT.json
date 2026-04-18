@@ -1,0 +1,164 @@
+{
+  "package_root": "/mnt/data/work_retrofit_fix/codex-harness-skillkit",
+  "valid": true,
+  "errors": [],
+  "warnings": [],
+  "checks": {
+    "bootstrap_stdout": {
+      "status": "generated",
+      "target": "/tmp/plugin_self_check__5f7sa59/bootstrap_target",
+      "validation": {
+        "repo_root": "/tmp/plugin_self_check__5f7sa59/bootstrap_target",
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "state_summary": {
+          "bootstrap_mode": false,
+          "formal_stage": "primary_iteration",
+          "current_pipeline_anchor": "PIPELINE:stage.primary_iteration",
+          "current_subflow_anchor": "PIPELINE:subflow.stage_identification",
+          "last_verification": {
+            "status": "pass",
+            "source": "skills/_shared/scripts/validate_harness.py",
+            "checked_at": "2026-04-18T16:32:10Z"
+          }
+        }
+      },
+      "next_action": "Start a new Codex run in the target repository so the generated AGENTS.md is loaded, then continue with stage_identification."
+    },
+    "bootstrap_validation": {
+      "repo_root": "/tmp/plugin_self_check__5f7sa59/bootstrap_target",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "state_summary": {
+        "bootstrap_mode": false,
+        "formal_stage": "primary_iteration",
+        "current_pipeline_anchor": "PIPELINE:stage.primary_iteration",
+        "current_subflow_anchor": "PIPELINE:subflow.stage_identification",
+        "last_verification": {
+          "status": "pass",
+          "source": "skills/_shared/scripts/validate_harness.py",
+          "checked_at": "2026-04-18T16:32:10Z"
+        }
+      }
+    },
+    "retrofit_apply_without_plan": {
+      "status": "blocked",
+      "reason": "apply-safe-overlay requires an existing completed plan in the target repository",
+      "missing_plan_docs": [
+        "docs/PROJECT_INVENTORY.md",
+        "docs/RETROFIT_INVENTORY.md",
+        "docs/RETROFIT_MAPPING.md",
+        "docs/RETROFIT_DECISION_LOG.md"
+      ]
+    },
+    "retrofit_plan": {
+      "status": "plan_complete_overlay_eligible",
+      "apply_safe_overlay_eligible": true,
+      "conflict": {
+        "has_conflict": false,
+        "reason": "",
+        "conflicting_controls": [],
+        "recommended_skill": ""
+      },
+      "docs": {
+        "project_inventory": "docs/PROJECT_INVENTORY.md",
+        "retrofit_inventory": "docs/RETROFIT_INVENTORY.md",
+        "retrofit_mapping": "docs/RETROFIT_MAPPING.md",
+        "retrofit_decision_log": "docs/RETROFIT_DECISION_LOG.md"
+      },
+      "next_action": "Safe overlay may proceed after explicit user approval."
+    },
+    "retrofit_apply": {
+      "status": "applied",
+      "docs": {
+        "project_inventory": "docs/PROJECT_INVENTORY.md",
+        "retrofit_inventory": "docs/RETROFIT_INVENTORY.md",
+        "retrofit_mapping": "docs/RETROFIT_MAPPING.md",
+        "retrofit_decision_log": "docs/RETROFIT_DECISION_LOG.md"
+      },
+      "created": [
+        "AGENTS.md",
+        "PIPELINE.md",
+        "CONTRIBUTIONS.md",
+        "state/CURRENT_STATE.json",
+        "config/stage_defaults.json",
+        "memory/index.json",
+        "garbage/index.json",
+        "memory/active/events/MEM-RETROFIT-0001.md",
+        "memory/active/snapshots/SNAPSHOT-primary_iteration-retrofit-0001.md"
+      ],
+      "readme_result": {
+        "patched": true,
+        "fallback_created": false,
+        "matched_heading": "Project Structure"
+      },
+      "validation": {
+        "repo_root": "/tmp/plugin_self_check__5f7sa59/retrofit_legacy",
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "shared_validation": {
+          "repo_root": "/tmp/plugin_self_check__5f7sa59/retrofit_legacy",
+          "valid": true,
+          "errors": [],
+          "warnings": [],
+          "state_summary": {
+            "bootstrap_mode": false,
+            "formal_stage": "primary_iteration",
+            "current_pipeline_anchor": "PIPELINE:stage.primary_iteration",
+            "current_subflow_anchor": "PIPELINE:subflow.stage_identification",
+            "last_verification": {
+              "status": "pass",
+              "source": "skills/project_retrofit/scripts/validate_retrofit.py",
+              "checked_at": "2026-04-18T16:32:17Z"
+            }
+          }
+        }
+      },
+      "next_action": "Start a new Codex run in the target repository so the new AGENTS.md is loaded, then continue with stage_identification."
+    },
+    "retrofit_conflict": {
+      "status": "plan_conflict_redirect_to_evolution",
+      "apply_safe_overlay_eligible": false,
+      "conflict": {
+        "has_conflict": true,
+        "reason": "repository contains partial or conflicting harness control files",
+        "conflicting_controls": [
+          "AGENTS.md"
+        ],
+        "recommended_skill": "project_evolution"
+      },
+      "docs": {
+        "project_inventory": "docs/PROJECT_INVENTORY.md",
+        "retrofit_inventory": "docs/RETROFIT_INVENTORY.md",
+        "retrofit_mapping": "docs/RETROFIT_MAPPING.md",
+        "retrofit_decision_log": "docs/RETROFIT_DECISION_LOG.md",
+        "retrofit_conflict_report": "docs/RETROFIT_CONFLICT_REPORT.md"
+      },
+      "next_action": "Back up the repository and continue with project_evolution."
+    },
+    "evolution": {
+      "status": "planned",
+      "impact_report": "docs/EVOLUTION_IMPACT_REPORT.md",
+      "validation": {
+        "repo_root": "/tmp/plugin_self_check__5f7sa59/bootstrap_target",
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "state_summary": {
+          "bootstrap_mode": false,
+          "formal_stage": "primary_iteration",
+          "current_pipeline_anchor": "PIPELINE:stage.primary_iteration",
+          "current_subflow_anchor": "PIPELINE:subflow.stage_identification",
+          "last_verification": {
+            "status": "pass",
+            "source": "skills/_shared/scripts/validate_harness.py",
+            "checked_at": "2026-04-18T16:32:10Z"
+          }
+        }
+      }
+    }
+  }
+}

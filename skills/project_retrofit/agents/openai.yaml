@@ -1,0 +1,8 @@
+interface:
+  display_name: "Project Retrofit"
+  short_description: "Plan and, when safe, overlay a Generic Project Harness around an existing repository."
+  default_prompt: "Use $project_retrofit to inventory this repository, build a directory-level retrofit plan, preserve legacy working directories in place, and only apply a safe overlay after planning is complete, no blocking questions remain, and any README patch has explicit approval."
+  brand_color: "#5B4BFF"
+
+policy:
+  allow_implicit_invocation: false
